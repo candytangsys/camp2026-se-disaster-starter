@@ -22,3 +22,26 @@ export const statusLabels: Record<string, string> = {
 export function labelForStatus(status: string): string {
   return statusLabels[status] ?? status;
 }
+
+export const needTypeLabels: Record<string, string> = {
+  cleanup: "清理",
+  delivery: "運送",
+  repair: "修繕",
+  care: "照護",
+  other: "其他",
+};
+
+export const matchModeLabels: Record<string, string> = {
+  self_claim: "自助認領",
+  assigned: "指派",
+  hybrid: "混合",
+  locked: "鎖定（需協調者處理）",
+};
+
+export function labelForNeedType(needType: string): string {
+  return needTypeLabels[needType] ?? needType;
+}
+
+export function labelForMatchMode(matchMode: string): string {
+  return matchModeLabels[matchMode] ?? matchMode;
+}
